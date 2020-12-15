@@ -8,7 +8,7 @@
     {
       "name": "<%=AUTHOR_NAME%>",
       "email": "<%=AUTHOR_EMAIL%>",
-	  "homepage": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>"	
+	  "homepage": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>",
 	  "issues": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>/issues"
     }
   ],

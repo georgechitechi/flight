@@ -1,6 +1,6 @@
 {
   "name": "generator-packager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "generators/index.js",
   "description": "A Yeoman generator for Laravel packages.",
   "author": "George Chitechi <george@flightsadmin.com>",

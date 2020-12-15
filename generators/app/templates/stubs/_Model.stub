@@ -1,0 +1,24 @@
+<?php
+
+namespace <%=PACKAGE_NAMESPACE%>\Models;
+
+use Illuminate\Database\Eloquent\Model;
+/**
+ * Class <%=CLASS_NAME%>
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
+class <%=CLASS_NAME%> extends Model
+{
+
+    // static $rules = [ ];
+
+    protected $perPage = 20;
+
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['<%=PACKAGE_NAME%>','name','email'];
+}

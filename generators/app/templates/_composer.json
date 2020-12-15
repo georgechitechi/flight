@@ -1,0 +1,43 @@
+{
+  "name": "<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>",
+  "description": "Awesome <%=CLASS_NAME%> Package",
+  "keywords": ["Laravel", "<%=CLASS_NAME%>"],
+  "authors": [
+    {
+      "name": "<%=AUTHOR_NAME%>",
+      "email": "<%=AUTHOR_EMAIL%>",
+	  "homepage": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>"	
+	  "issues": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>/issues"
+    }
+  ],
+  "homepage": "https://github.com/<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>",
+  "require": {
+    "php": "^7.3|^8.0",
+    "laravel/framework": "^7|^8"
+  },
+  "require-dev": {
+	"fakerphp/faker": "^1"
+	
+  },
+  "license": "<%=LICENSE%>",
+  "autoload": {
+    "psr-4": {
+      "<%=PACKAGE_NAMESPACE%>\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "<%=PACKAGE_NAMESPACE%>\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "<%=PACKAGE_NAMESPACE%>\\<%=CLASS_NAME%>ServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+  
+  }
+}

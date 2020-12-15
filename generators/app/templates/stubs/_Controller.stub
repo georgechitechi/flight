@@ -1,0 +1,110 @@
+<?php
+
+namespace <%=PACKAGE_NAMESPACE%>\Controllers;
+
+use App\Http\Controllers\Controller;
+use <%=PACKAGE_NAMESPACE%>\Models\<%=CLASS_NAME%>;
+use Illuminate\Http\Request;
+
+/**
+ * Class <%=CLASS_NAME%>Controller
+ * @package App\Http\Controllers
+ */
+class <%=CLASS_NAME%>Controller extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $<%=PACKAGE_NAME%>s = <%=CLASS_NAME%>::paginate();
+
+        return view('<%=PACKAGE_SLUG%>::<%=PACKAGE_SLUG%>.index', compact('<%=PACKAGE_NAME%>s'))
+            ->with('i', (request()->input('page', 1) - 1) * $<%=PACKAGE_NAME%>s->perPage());
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $<%=PACKAGE_NAME%> = new <%=CLASS_NAME%>();
+        return view('<%=PACKAGE_SLUG%>::<%=PACKAGE_SLUG%>.create', compact('<%=PACKAGE_NAME%>'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        request()->validate(<%=CLASS_NAME%>::$rules);
+
+        $<%=PACKAGE_NAME%> = <%=CLASS_NAME%>::create($request->all());
+
+        return redirect()->route('<%=PACKAGE_NAME%>.index')
+            ->with('success', '<%=CLASS_NAME%> created successfully.');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $<%=PACKAGE_NAME%> = <%=CLASS_NAME%>::find($id);
+
+        return view('<%=PACKAGE_SLUG%>::<%=PACKAGE_SLUG%>.show', compact('<%=PACKAGE_NAME%>'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $<%=PACKAGE_NAME%> = <%=CLASS_NAME%>::find($id);
+
+        return view('<%=PACKAGE_SLUG%>::<%=PACKAGE_SLUG%>.edit', compact('<%=PACKAGE_NAME%>'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  <%=CLASS_NAME%> $<%=PACKAGE_NAME%>
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, <%=CLASS_NAME%> $<%=PACKAGE_NAME%>)
+    {
+        request()->validate(<%=CLASS_NAME%>::$rules);
+
+        $<%=PACKAGE_NAME%>->update($request->all());
+
+        return redirect()->route('<%=PACKAGE_NAME%>.index')
+            ->with('success', '<%=CLASS_NAME%> updated successfully');
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
+    public function destroy($id)
+    {
+        $<%=PACKAGE_NAME%> = <%=CLASS_NAME%>::find($id)->delete();
+
+        return redirect()->route('<%=PACKAGE_SLUG%>::<%=PACKAGE_SLUG%>.index')
+            ->with('success', '<%=CLASS_NAME%> deleted successfully');
+    }
+}

@@ -1,0 +1,15 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Language Lines
+    |--------------------------------------------------------------------------
+    | Add your Package Language lines below
+    */
+
+    'create' => 'Create new Record.',
+    'show' => 'Show Existing Record.',
+
+];

@@ -1,0 +1,4 @@
+                        <div class="form-group">
+                            <strong><%=CLASS_NAME%>:</strong>
+                            <%=PACKAGE_NAME%>-><%=PACKAGE_NAME%>
+                        </div>

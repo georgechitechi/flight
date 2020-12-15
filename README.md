@@ -13,7 +13,7 @@
 
 ## What's this all about
 
-This generator will quickly and easily scaffold a Laravel package, getting you up and running within a few seconds.
+**Packager** will quickly and easily scaffold a Laravel package, getting you up and running within a few seconds.
 
 It will generate the necessary files such as a service provider and a composer file, it will also install your package as a local depenedency while also generating placeholder directories for migrations, translations etc.
 
@@ -30,7 +30,7 @@ npm install -g yo
 After that, install the this generator:
 
 ```bash
-npm i -g generator-laravel-packar
+npm i -g generator-packager
 ```
   
    This will install the generator globally so yo can access it by `yo laravel-packar`.
@@ -40,7 +40,7 @@ npm i -g generator-laravel-packar
 Run the following command:
 
 ```bash
-yo laravel-packar
+yo packager
 ```
 
 and follow the instructions.
@@ -64,7 +64,7 @@ This is only necessary for the composer.json file. Changes in any other files in
 ## Contributing
 
 ### Credit
-- Dependancies 
+- Dependancies
   ```bash
   - georgechitechi/cool
   - laravel/framework
@@ -81,4 +81,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## Security
 
-If you discover any security-related issues, please email george@flightsadmin.com instead of using the issue tracker. Security issues willbe addreesed promptly.
+If you discover any security-related issues, please email george@flightsadmin.com instead of using the issue tracker. Security issues will be addressed promptly.

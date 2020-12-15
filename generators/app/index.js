@@ -10,7 +10,7 @@ const prompts = require("./modules/prompts");
 
 module.exports = class extends Generator {
   initializing() {
-    this.log(`Welcome to the ${chalk.green('Laravel Package Scaffolder!')}`);
+    this.log(`Welcome to the ${chalk.green('Packager!')}`);
     this.log(chalk.bgRed(`Before starting, make sure you are in the root of your Laravel Application!`));
     this.props = {};
   }
@@ -19,9 +19,7 @@ module.exports = class extends Generator {
    * Prompt for the package settings, and set the generator properties
    * for the scaffolding values.
    */
-  prompting() {
-	  
-	  
+  prompting() {	  
 	  
     this.log(chalk.green("Fetching Your GitHub info, please wait..."));
     
@@ -48,9 +46,7 @@ module.exports = class extends Generator {
       });
     });
   }
-      
-  // default() {}
-  
+
   /**
    * Scaffold the various files and directories
    */

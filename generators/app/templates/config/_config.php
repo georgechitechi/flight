@@ -5,4 +5,6 @@
  */
 return [
     'title' => '<%=CLASS_NAME%>',
+	
+	'version' => '1.0.0',
 ];

@@ -2,6 +2,8 @@
   "name": "<%=VENDOR_SLUG%>/<%=PACKAGE_SLUG%>",
   "description": "Awesome <%=CLASS_NAME%> Package",
   "keywords": ["Laravel", "<%=CLASS_NAME%>"],
+  "license": "<%=LICENSE%>",
+  
   "authors": [
     {
       "name": "<%=AUTHOR_NAME%>",
@@ -15,11 +17,8 @@
     "php": "^7.3|^8.0",
     "laravel/framework": "^7|^8"
   },
-  "require-dev": {
-	"fakerphp/faker": "^1"
-	
-  },
-  "license": "<%=LICENSE%>",
+  "require-dev": { },
+  
   "autoload": {
     "psr-4": {
       "<%=PACKAGE_NAMESPACE%>\\": "src/"

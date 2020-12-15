@@ -33,7 +33,7 @@ After that, install the this generator:
 npm i -g generator-packager
 ```
   
-   This will install the generator globally so yo can access it by `yo laravel-packar`.
+   This will install the generator globally so yo can access it by `yo packager`.
 
 ## Using the generator
 

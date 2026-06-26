@@ -60,7 +60,7 @@ module.exports = class extends Generator {
 	this.log("");
 	this.log(chalk.blue("Adding dependancies, please wait..."));
 	this.log("");
-	this.spawnCommandSync('composer', ['require', 'georgechitechi/cool', '--dev']);
+	this.spawnCommandSync('composer', ['require', 'lightsadmin/cool', '--dev']);
 	this.log("");
 	this.log(chalk.blue("Dependancies Added Successfully"));
 	this.log("");
